@@ -2,7 +2,9 @@
 
 Esta herramienta permite representar un grafo a través de sus dos 
 representaciones matriciales caracterísitcas, la matriz de adyacencia y la 
-matriz de incidencia. 
+matriz de incidencia.
+
+[!image](./media/GraphRenderingTool_LivePreview.png) 
 
 ## Modo de operación 
 
