@@ -13,7 +13,6 @@ import mx.uaemex.fi.linc13.saturn.app.Controller;
 import static java.awt.GridBagConstraints.*;
 
 public class Menu extends JPanel{
-
     private Font regular = new Font ("Segoe UI",0,14);
     private Font larger = new Font ("Segoe UI",0,18);
     private GBLayoutBuilder builder = new GBLayoutBuilder();

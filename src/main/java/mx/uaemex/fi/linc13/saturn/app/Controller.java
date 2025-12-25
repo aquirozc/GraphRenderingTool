@@ -4,7 +4,9 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import mx.uaemex.fi.linc13.saturn.data.MatrixType;
+import mx.uaemex.fi.linc13.saturn.engine.FRGraphRenderer;
 import mx.uaemex.fi.linc13.saturn.engine.GraphBuilder;
+import mx.uaemex.fi.linc13.saturn.presentation.GraphFrame;
 import mx.uaemex.fi.linc13.saturn.presentation.MatrixFrame;
 import mx.uaemex.fi.linc13.saturn.presentation.Menu;
 import mx.uaemex.fi.linc13.saturn.data.Graph;
@@ -55,7 +57,11 @@ public class Controller{
 			}
 
 			case "Opción 4" -> {
-
+			    if(isGraphNull()){
+					return;
+				}
+				FRGraphRenderer.computeVertexPositions(graph, 500, 500);
+				new GraphFrame(graph).setVisible(true);
 			}
 
 			case "Opción 5" -> {
