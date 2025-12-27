@@ -13,6 +13,7 @@ import mx.uaemex.fi.linc13.saturn.app.Controller;
 import static java.awt.GridBagConstraints.*;
 
 public class Menu extends JPanel{
+
     private Font regular = new Font ("Segoe UI",0,14);
     private Font larger = new Font ("Segoe UI",0,18);
     private GBLayoutBuilder builder = new GBLayoutBuilder();
@@ -34,7 +35,7 @@ public class Menu extends JPanel{
         JLabel op1 = new JLabelExt(" 1.- Editar grafo  ",regular);
         JLabel op2 = new JLabelExt(" 2.- Mostrar matriz de adyacencia  ",regular);
         JLabel op3 = new JLabelExt(" 3.- Mostrar matriz de incidencia  ", regular);
-        JLabel op4 = new JLabelExt (" 4.- Dibujar Grafo (Beta)   ", regular);
+        JLabel op4 = new JLabelExt (" 4.- Dibujar Grafo  ", regular);
         JLabel op5 = new JLabelExt(" 5.- Mostrar valencia de los nodos ", regular);
         JLabel op6 = new JLabelExt(" 6.- Creditos del programa     ", regular);
 
@@ -46,9 +47,9 @@ public class Menu extends JPanel{
         button.addActionListener(e -> controller.onButtonPress((String)dropdown.getSelectedItem()));
 
         this.setLayout(new GridBagLayout());
-        this.add(title, builder.startAt(0, 0).weighty(1).gridheight(5).anchor(FIRST_LINE_START).insets(new Insets(20, 15, 0, 120)).build());
-        this.add(timestamp, builder.startAt(0, 5).gridheight(4).anchor(LAST_LINE_START).marginB(24).marginL(20).build());
-        this.add(background,builder.startAt(0,0).weightx(1).gridheight(9).fill(BOTH).build());
+        this.add(title, builder.startAt(0, 0).weighty(1).gridheight(6).anchor(FIRST_LINE_START).insets(new Insets(20, 15, 0, 120)).build());
+        this.add(timestamp, builder.startAt(0, 6).gridheight(4).anchor(LAST_LINE_START).marginb(24).marginl(20).build());
+        this.add(background,builder.startAt(0,0).weightx(1).gridheight(10).fill(BOTH).build());
         this.add(header, builder.startAt(1, 0).weighty(1).weightx(1).build());
         this.add(op1, builder.startAt(1, 1).weighty(1).weightx(1).build());
         this.add(op2, builder.startAt(1, 2).weighty(1).weightx(1).build());
@@ -56,8 +57,9 @@ public class Menu extends JPanel{
         this.add(op4, builder.startAt(1, 4).weighty(1).weightx(1).build());
         this.add(op5, builder.startAt(1, 5).weighty(1).weightx(1).build());
         this.add(op6, builder.startAt(1, 6).weighty(1).weightx(1).build());
-        this.add(dropdown, builder.startAt(1, 7).fill(HORIZONTAL).build());
-        this.add(button, builder.startAt(1, 8).fill(HORIZONTAL).build());
+        this.add(new JLabel(), builder.startAt(1, 7).weighty(1).weightx(1).build());
+        this.add(dropdown, builder.startAt(1, 8).weighty(1).fill(BOTH).build());
+        this.add(button, builder.startAt(1, 9).weighty(1).fill(BOTH).build());
     }
 
 }

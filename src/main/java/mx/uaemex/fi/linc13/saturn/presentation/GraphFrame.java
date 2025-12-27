@@ -16,7 +16,7 @@ public class GraphFrame extends JFrame {
 
     public GraphFrame(Graph graph) {
         this.graph = graph;
-        setTitle("Graph Viewer");
+        setTitle("Visualizador de grafos");
         setSize(600, 600);
 
         for(Vertex v : graph.vertexes){

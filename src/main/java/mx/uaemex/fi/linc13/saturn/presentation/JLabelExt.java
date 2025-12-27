@@ -9,4 +9,5 @@ public class JLabelExt extends JLabel {
         super(text);
         this.setFont(font);
     }
+
 }

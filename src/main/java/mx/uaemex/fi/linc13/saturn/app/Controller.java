@@ -3,6 +3,7 @@ package mx.uaemex.fi.linc13.saturn.app;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+
 import mx.uaemex.fi.linc13.saturn.data.MatrixType;
 import mx.uaemex.fi.linc13.saturn.engine.FRGraphRenderer;
 import mx.uaemex.fi.linc13.saturn.engine.GraphBuilder;
@@ -12,17 +13,18 @@ import mx.uaemex.fi.linc13.saturn.presentation.Menu;
 import mx.uaemex.fi.linc13.saturn.data.Graph;
 
 public class Controller{
+
     private Graph graph = null;
 
-    public Controller(){
+    public Controller(boolean resizable){
         try{
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
         }catch (Exception e){}
 
         JFrame frame = new JFrame("Herramienta de representación de grafos");
         frame.setContentPane(new Menu(this));
-        frame.setSize(620,430);
-        frame.setResizable(false);
+        frame.setSize(680,420);
+        frame.setResizable(resizable);
         frame.setLocationRelativeTo( null );
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
@@ -39,7 +41,12 @@ public class Controller{
     public void onButtonPress(String option){
         switch (option) {
 			case "Opción 1" -> {
-			    this.graph = GraphBuilder.generateNewGraph(JOptionPane.showInputDialog(null, "Por favor digite el grafo de la siguiente forma:\n(a,b)(b,c)(c,a)"));
+			    try{
+					this.graph = GraphBuilder.generateNewGraph(JOptionPane.showInputDialog(null, "Por favor digite el grafo de la siguiente forma:\n(a,b)(b,c)(c,a)"));
+					graph = graph.vertexes.size() == 0 ? null : graph;
+				}catch(IllegalArgumentException e){
+				    JOptionPane.showMessageDialog(null, "La entrada no tiene el formato correcto", "Error Fatal", JOptionPane.ERROR_MESSAGE);
+				}catch(NullPointerException e){}
 			}
 
 			case "Opción 2" -> {

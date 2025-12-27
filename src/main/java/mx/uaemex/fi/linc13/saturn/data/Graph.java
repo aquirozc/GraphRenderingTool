@@ -3,6 +3,7 @@ package mx.uaemex.fi.linc13.saturn.data;
 import java.util.List;
 
 public class Graph{
+
     public final List<Vertex> vertexes;
     public final List<Edge> edges;
 
@@ -22,6 +23,7 @@ public class Graph{
     }
 
     public static class Vertex{
+
         public final char label;
 
         private double[] pos = new double[]{0,0};
@@ -61,6 +63,7 @@ public class Graph{
         public boolean equals(Object obj) {
             return obj instanceof Vertex && ((Vertex)(obj)).label == this.label;
         }
+
     }
 
 }

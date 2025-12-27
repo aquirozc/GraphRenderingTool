@@ -72,23 +72,22 @@ public class GBLayoutBuilder{
 		return this;
 	}
 
-
-	public GBLayoutBuilder marginB(int m) {
+	public GBLayoutBuilder marginb(int m) {
 		cons.insets.bottom = m;
 		return this;
 	}
 
-	public GBLayoutBuilder marginL(int m) {
+	public GBLayoutBuilder marginl(int m) {
 		cons.insets.left = m;
 		return this;
 	}
 
-	public GBLayoutBuilder marginR(int m) {
+	public GBLayoutBuilder marginr(int m) {
 		cons.insets.right = m;
 		return this;
 	}
 
-	public GBLayoutBuilder marginT(int m) {
+	public GBLayoutBuilder margint(int m) {
 		cons.insets.top = m;
 		return this;
 	}

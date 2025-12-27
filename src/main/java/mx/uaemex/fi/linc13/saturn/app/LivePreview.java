@@ -29,6 +29,6 @@ public class LivePreview{
         }
 
         new GraphFrame(graph).setVisible(true);
-        new Controller();
+        new Controller(true);
     }
 }
