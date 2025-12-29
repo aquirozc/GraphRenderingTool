@@ -4,7 +4,7 @@ Esta herramienta permite representar un grafo a través de sus dos
 representaciones matriciales caracterísitcas, la matriz de adyacencia y la 
 matriz de incidencia.
 
-![demostration](./media/GraphRenderingTool_LivePreview.png) 
+![demostration](./gh-media/GraphRenderingTool_LivePreview1.png) 
 
 ## Modo de operación 
 
@@ -23,5 +23,9 @@ Donde
  - Soporte para un numero ilimitado de aristas
  - Soporte para hasta 56 nodos
  - Interfaz de usuario amigable
- - Representación de matrices mediante tablas  
-
+ - Representación de matrices mediante tablas
+ - Visualización de grafos mediante el algoritmo de Fruchterman-Reingold
+ 
+ ## Ejemplo de visualización de grafos
+ 
+ ![demostration](./gh-media/GraphRenderingTool_LivePreview2.png)
